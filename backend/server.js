@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 
 import authRoutes from '../backend/routes/authRoutes.js';
 import messageRoutes from './routes/messageRoutes.js';
-import userRoutes from './routes/userRoutes.js'
+import userRoutes from './routes/userRoutes.js';
 
 import connectToMongoDb from './db/connectToMongoDb.js';
 
@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
-app.use('/api/messages', userRoutes);
+app.use('/api/users', userRoutes);
 
 connectToMongoDb()
   .then(() => {

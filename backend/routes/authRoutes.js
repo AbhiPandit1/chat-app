@@ -9,10 +9,7 @@ router.post('/login', login);
 router.post('/logout', logout);
 
 
-//Message Routes
-router.post('/signup', signup);
-router.post('/login', login);
-router.post('/logout', logout);
+
 
 
 
