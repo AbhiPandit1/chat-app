@@ -11,11 +11,13 @@ const useGetConversations = () => {
       try {
         const res = await fetch('/api/users');
         const data = await res.json();
+        console.log('API Response:', data); // Log the API response
         if (data.error) {
           throw new Error(data.error);
         }
         setConversations(data);
       } catch (error) {
+        console.error('Error fetching conversations:', error); // Log any errors
         toast.error(error.message);
       } finally {
         setLoading(false);
